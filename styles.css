@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Base Styles --- */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* --- Header Styles --- */
+
+header {
+    text-align: center;
+}
+h1 {
+    font-size: 3em;
+    font-weight: lighter;
+    margin: 10px auto;
+    padding: 10px;
+}
+header p {
+    line-height: 2em;
+}
+
+/* --- Schedule Styles --- */
+
+ul {
+    margin: 20px auto;
+    width: 90%;
+}
+li {
+    display: block;
+    display: flex;
+    list-style: none;  
+}
+input {
+    background-color: rgb(91,192,222);
+    color: white;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+.past-time {
+    background-color: rgb(179, 178, 178);
+}
+.current-time {
+    background-color: rgb(92,184,92);
+}
+li span {
+    margin-right: 10px;
+    padding-top: 8px;
+}
+.single-digit span {
+    margin-right: 20px;
+}
+.save-button {
+    background-color: rgb(95, 252, 95);
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 5%;
+}
+i {
+    size: 2em;
+}
+
+/* --- Media Queries --- */
+
+@media (min-width: 576px) {
+    ul {
+        width: 80%;
+    }     
+}
+@media (min-width: 768px) {
+    ul {
+        width: 70%;
+    }
+}
+@media (min-width: 992px) {
+    ul {
+        width: 60%;
+    }
+}
+@media (min-width: 1200px) {
+
+}
