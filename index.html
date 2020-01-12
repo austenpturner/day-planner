@@ -13,56 +13,58 @@
     <header>
         <h1>Work Day Scheduler</h1>
         <p>A simple calendar app that helps you plan your day</p>
-        <p>Today is Thursday, January 9th 2020</p>
+        <p id="current-date">Today is Thursday, January 9th 2020</p>
     </header>
 
     <ul>
-        <li class='hour-container single-digit'>
-            <span>9am</span>
-            <input type='text'>
+        <li class='input-container single-digit'>
+            <span class='hour'>9am</span>
+            <input class='user-input' type='text'>
             <button type='submit' class='save-button'><i class="far fa-save fa-lg"></i></button>
         </li>
-        <li class='hour-container'>
-            <span>10am</span>
-            <input type='text'>
+        <li class='input-container'>
+            <span class='hour'>10am</span>
+            <input class='user-input' type='text'>
             <button type='submit' class='save-button'><i class="far fa-save fa-lg"></i></button>
         </li>
-        <li class='hour-container'>
-            <span>11am</span>
-            <input type='text'>
+        <li class='input-container'>
+            <span class='hour'>11am</span>
+            <input class='user-input' type='text'>
             <button type='submit' class='save-button'><i class="far fa-save fa-lg"></i></button>
         </li>
-        <li class='hour-container'>
-            <span>12pm</span>
-            <input type='text'>
+        <li class='input-container'>
+            <span class='hour'>12pm</span>
+            <input class='user-input' type='text'>
             <button type='submit' class='save-button'><i class="far fa-save fa-lg"></i></button>
         </li>
-        <li class='hour-container single-digit'>
-            <span>1pm</span>
-            <input type='text'>
+        <li class='input-container single-digit'>
+            <span class='hour'>1pm</span>
+            <input class='user-input' type='text'>
             <button type='submit' class='save-button'><i class="far fa-save fa-lg"></i></button>
         </li>
-        <li class='hour-container single-digit'>
-            <span>2pm</span>
-            <input type='text'>
+        <li class='input-container single-digit'>
+            <span class='hour'>2pm</span>
+            <input class='user-input' type='text'>
             <button type='submit' class='save-button'><i class="far fa-save fa-lg"></i></button>
         </li>
-        <li class='hour-container single-digit'>
-            <span>3pm</span>
-            <input type='text'>
+        <li class='input-container single-digit'>
+            <span class='hour'>3pm</span>
+            <input class='user-input' type='text'>
             <button type='submit' class='save-button'><i class="far fa-save fa-lg"></i></button>
         </li>
-        <li class='hour-container single-digit'>
-            <span>4pm</span>
-            <input type='text'>
+        <li class='input-container single-digit'>
+            <span class='hour'>4pm</span>
+            <input class='user-input' type='text'>
             <button type='submit' class='save-button'><i class="far fa-save fa-lg"></i></button>
         </li>
-        <li class='hour-container single-digit'>
-            <span>5pm</span>
-            <input type='text'>
+        <li class='input-container single-digit'>
+            <span class='hour'>5pm</span>
+            <input class='user-input' type='text'>
             <button type='submit' class='save-button'><i class="far fa-save fa-lg"></i></button>
         </li>
     </ul>
     
+    <script src='moment.js'></script>
+    <script src='script.js'></script>
 </body>
 </html>
