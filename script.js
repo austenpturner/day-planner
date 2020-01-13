@@ -19,20 +19,16 @@ let schedule = [];
 // Statement to display current day and date
 currentDate.textContent = `Today is ${day}, ${date}`;
 
-// Statement to change color of present and past hour slots
+// Statement to change color of past time inputs and present time input
 for (let i = 0; i < hours.length; i++) {
-    if (hours[i].textContent === currentHour) {
+    if (hours[i].textContent !== currentHour) {
+        let pastInput = hours[i].nextElementSibling;
+        pastInput.classList.add('past-time');
+    } else if (hours[i].textContent === currentHour) {
         let presentInput = hours[i].nextElementSibling;
         presentInput.classList.add('present-time');
-        // TO DO: give all previous inputs class of past-time...
-        if (i !== 0) {
-            let parentLi = hours[i].parentElement;
-            let prevLi = parentLi.previousElementSibling;
-            let prevHour = prevLi.firstElementChild;
-            let prevInput = prevHour.nextElementSibling;
-            prevInput.classList.add('past-time');
-        }
-    } 
+        break;
+    }
 }
 
 // Print schedule saved in local storage to screen

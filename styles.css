@@ -37,9 +37,11 @@ li {
     list-style: none;  
 }
 input {
-    background-color: rgb(91,192,222);
+    background-color: rgb(2,117,216);
     color: white;
     border: none;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     padding: 10px;
@@ -49,7 +51,7 @@ input {
     background-color: rgb(179, 178, 178);
 }
 .present-time {
-    background-color: rgb(92,184,92);
+    background-color: rgb(91,192,222);
 }
 li span {
     margin-right: 10px;
@@ -61,8 +63,11 @@ li span {
 .save-button {
     background-color: rgb(95, 252, 95);
     border: none;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    cursor: pointer;
     padding: 10px;
     width: 10%;
 }
