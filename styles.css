@@ -48,7 +48,7 @@ input {
 .past-time {
     background-color: rgb(179, 178, 178);
 }
-.current-time {
+.present-time {
     background-color: rgb(92,184,92);
 }
 li span {
