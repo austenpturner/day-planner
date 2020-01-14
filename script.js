@@ -31,12 +31,10 @@ for (let i = 0; i < hours.length; i++) {
     }
 }
 
-// Print schedule saved in local storage to screen
+// Display schedule saved in local storage
 renderSchedule();
-console.log(eventHours);
-console.log(schedule);
 
-// Display save or check icons when user is updating schedule
+// Display save icon when user is updating schedule and check icon after user saves their changes
 for (let i = 0; i < userInput.length; i++) {
     let siblingBtn = userInput[i].nextElementSibling;
     let childIcon = siblingBtn.firstElementChild;
@@ -61,7 +59,6 @@ for (let i = 0; i < saveBtns.length; i++) {
         plans = inputElement.value;
         hourElement = inputElement.previousElementSibling;
         hour = hourElement.textContent;
-    
         if (inputElement.value === '' && eventHours.indexOf(hour) > -1) {
             deleteEvent();
             saveSchedule();
@@ -77,7 +74,7 @@ for (let i = 0; i < saveBtns.length; i++) {
     })  
 }
 
-// Functions for updating calendar
+// Functions for updating schedule
 function saveEvent() {
     eventHours.push(hour);
     let event = {
@@ -86,7 +83,6 @@ function saveEvent() {
     }
     schedule.push(event);
 }
-
 function updateEvent() {
     for (let i = 0; i < schedule.length; i++) {
         if (schedule[i].time === hour) {
@@ -94,28 +90,20 @@ function updateEvent() {
         }
     }
 }
-
 function deleteEvent() {
-    console.log(eventHours);
-    console.log(schedule);
     for (let i = 0; i < eventHours.length; i++) {
         if (eventHours[i] === hour) {
-            console.log(hour);
-            console.log(eventHours[i]);
-            eventHours.splice(eventHours[i], 1);
-            console.log(eventHours);
+            eventHours.splice(i, 1);
         }
     }
     for (let i = 0; i < schedule.length; i++) {
         if (schedule[i].time === hour) {
-            console.log(schedule[i]);
-            console.log(schedule[i].time);
-            schedule.splice(schedule[i], 1);
-            console.log(schedule);
+            schedule.splice(i, 1);
         }
     }
 }
 
+// Function to save schedule to local storage
 function saveSchedule() {
     let savedSchedule = {
         'date': date,
@@ -124,6 +112,7 @@ function saveSchedule() {
     localStorage.setItem('mySchedule', JSON.stringify(savedSchedule));
 }
 
+// Function to get and display schedule from local storage
 function renderSchedule() {
     if (JSON.parse(localStorage.getItem('mySchedule') !== null)) {
         let lastSchedule = (JSON.parse(localStorage.getItem('mySchedule')).schedule);
