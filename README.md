@@ -9,10 +9,10 @@ The most difficult part of this assignment was getting the saved items back onto
 
 I had fun designing the planner and also making save buttons that were user responsive.
 
+Link to deployed site: https://austenpturner.github.io/day-planner/
+
 ## Next Steps
 I would like to build on this app by making it a year planner. The user would be able to input and save plans for any day out of the entire year.
 
 ## Thank for reading! :smile:
-Please contact me with any questions or feedback.
-
-austenpturner@msn.com
+Please contact me with any questions or comments: austenpturner@msn.com
