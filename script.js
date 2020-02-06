@@ -1,6 +1,9 @@
 // DOM Elements
+const pageBody = document.getElementById('page');
 const currentDate = document.getElementById('current-date');
 const hours = document.getElementsByClassName('hour');
+const toggleEl = document.getElementById('toggle-container');
+const darkMode = document.getElementById('dark-mode');
 const inputContainer = document.getElementsByClassName('input-container');
 const userInput = document.getElementsByClassName('user-input');
 const saveBtns = document.getElementsByClassName('save-button');
@@ -51,6 +54,23 @@ for (let i = 0; i < userInput.length; i++) {
         }
     })
 }
+
+// Event listener for dark-mode toggle
+toggleEl.addEventListener('click', function() {
+    if (!darkMode.checked) {
+        pageBody.classList.add('dark-mode');
+        for (let i = 0; i < userInput.length; i++) {
+            userInput[i].classList.add('dark-border');
+            saveBtns[i].classList.add('dark-border');
+        }
+    } else if (darkMode.checked) {
+        pageBody.classList.remove('dark-mode');
+        for (let i = 0; i < userInput.length; i++) {
+            userInput[i].classList.remove('dark-border');
+            saveBtns[i].classList.remove('dark-border');
+        }
+    }
+});
 
 // Event listener for save buttons
 for (let i = 0; i < saveBtns.length; i++) {

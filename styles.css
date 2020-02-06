@@ -2,12 +2,19 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 /* --- Base Styles --- */
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+}
+.dark-mode {
+    background-color: rgb(24, 24, 24);
+    /* border-top: 1px solid rgb(24, 24, 24);
+    border-bottom: 1px solid rgb(24, 24, 24); */
+    color: rgb(231, 231, 231);
 }
 
 /* --- Header Styles --- */
@@ -16,13 +23,83 @@ header {
     text-align: center;
 }
 h1 {
-    font-size: 3em;
+    font-size: 2.8em;
     font-weight: lighter;
-    margin: 10px auto;
+    margin: 40px auto 10px;
     padding: 10px;
 }
 header p {
-    line-height: 2em;
+    font-size: 0.9em;
+    line-height: 1em;
+    margin: 0px auto;
+    padding: 10px;
+    width: 70%;
+}
+
+/* --- Option toggle switch styles --- */
+
+#toggle-container {
+    position: absolute;
+    right: 15px;
+    top: -20px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    width: 52px;
+    height: 28px;
+}
+
+/* Hide input checkbox but keep click/tab behavior */
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(2,117,216);
+    border-radius: 34px;
+    transition: 300ms;
+    transition: 300ms;
+}
+
+/* Slider toggle */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 3px;
+    bottom: 4px;
+    background-image: radial-gradient(rgb(58, 58, 58), rgb(24, 24, 24));
+    border-radius: 50%;
+    transition: 300ms;
+    transition: 300ms;
+}
+  
+/* When input is checked change slider background color to green */
+input:checked + .slider {
+    background-color: rgb(91,192,222);
+}
+  
+/* When input is selected with tab then give slider a box-shadow */
+input:focus + .slider {
+    box-shadow: -1.5px 1.5px 5px rgba(0, 0, 0, 0.9);
+}
+
+/*  When input is checked translate slider toggle to the right */
+input:checked + .slider:before {
+    background-image: radial-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+    transform: translateX(24px);
 }
 
 /* --- Schedule Styles --- */
@@ -71,10 +148,21 @@ li span {
     padding: 10px;
     width: 10%;
 }
+.dark-border {
+    border-top: 1px solid rgb(24, 24, 24);
+    border-bottom: 1px solid rgb(24, 24, 24);
+}
 
 /* --- Media Queries --- */
 
 @media (min-width: 576px) {
+    h1 {
+        font-size: 3em;
+    }
+    header p {
+        font-size: 1em;
+        width: 90%;
+    }
     ul {
         width: 80%;
     }
